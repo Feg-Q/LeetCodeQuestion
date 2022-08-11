@@ -5,6 +5,7 @@ import java.util.Arrays;
 /**
  * @author Feg
  * @version 1.0
+ * 将0移动到数组末尾
  */
 public class Question283 {
     public static void main(String[] args) {
