@@ -56,12 +56,13 @@ public class Question5 {
     }
 
     public static int findLongest(char[] str, int low, int[] range) {
-        //查找中间部分
+        //查找中间部分（即一个奇数子串的中间的那个字母或者一个偶数子串的中间两个字母）
         int high = low;
+        //下面这个while循环是为了解决回文子串中间的几个字母相同的问题，
+        //将high赋值为相同字母的最后一个
         while (high < str.length - 1 && str[high + 1] == str[low]) {
             high++;
         }
-        //定位中间部分的最后一个字符
         int ans = high;
         //从中间向左右扩散
         while (low > 0 && high < str.length - 1 && str[low - 1] == str[high + 1]) {
@@ -73,6 +74,8 @@ public class Question5 {
             range[0] = low;
             range[1] = high;
         }
+        //返回当前回文子串的中间部分的最后一个字母是因为
+        // 在一个已经确定的回文子串的中间部分的其它字母为中心都不可能是回文子串
         return ans;
     }
 }
