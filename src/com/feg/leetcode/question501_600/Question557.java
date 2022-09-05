@@ -1,6 +1,4 @@
-package com.feg.leetcode;
-
-import java.util.Arrays;
+package com.feg.leetcode.question501_600;
 
 /**
  * @author Feg

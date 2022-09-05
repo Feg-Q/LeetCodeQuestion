@@ -1,4 +1,4 @@
-package com.feg.leetcode;
+package com.feg.leetcode.question301_400;
 
 import java.util.Arrays;
 
