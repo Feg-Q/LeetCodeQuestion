@@ -5,7 +5,6 @@ import java.util.LinkedList;
 /**
  * @author Feg
  * @version 1.0
- * 用
  */
 public class Question09 {
     class CQueue {

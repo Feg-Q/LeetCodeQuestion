@@ -51,4 +51,35 @@ public class Question20 {
             return false;
         }
     }
+
+    /**
+     * 第二种解法，使用栈，看算法秘籍的
+     * @param s
+     * @return
+     */
+    public boolean isValidTwo(String s){
+        char[] chars = s.toCharArray();
+        Stack<Character> stack = new Stack<>();
+        for (char aChar : chars) {
+            if (aChar == '(' || aChar == '{' || aChar == '['){
+                stack.push(aChar);
+            } else {
+                if (!stack.isEmpty() && switchChar(aChar) == stack.peek()){
+                    stack.pop();
+                } else {
+                    return false;
+                }
+            }
+        }
+        return stack.isEmpty();
+    }
+    public char switchChar(char c){
+        if (c == '}'){
+            return '{';
+        } else if (c == ']'){
+            return '[';
+        } else {
+            return '(';
+        }
+    }
 }

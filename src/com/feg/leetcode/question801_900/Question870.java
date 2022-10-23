@@ -1,4 +1,4 @@
-package com.feg.leetcode;
+package com.feg.leetcode.question801_900;
 
 import java.util.*;
 
