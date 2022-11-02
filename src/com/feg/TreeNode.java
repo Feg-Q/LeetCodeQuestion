@@ -1,4 +1,4 @@
-package com.feg.leetcode;
+package com.feg;
 
 /**
  * @author Feg

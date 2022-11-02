@@ -1,6 +1,6 @@
 package com.feg.leetcode.question801_900;
 
-import com.feg.leetcode.ListNode;
+import com.feg.ListNode;
 
 /**
  * @author Feg

@@ -1,6 +1,6 @@
 package com.feg.剑指offerll;
 
-import com.feg.leetcode.ListNode;
+import com.feg.ListNode;
 
 /**
  * @author Feg

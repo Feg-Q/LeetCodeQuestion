@@ -1,6 +1,6 @@
 package com.feg.leetcode.question1_100;
 
-import com.feg.leetcode.TreeNode;
+import com.feg.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
