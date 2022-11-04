@@ -1,6 +1,7 @@
 package com.feg.leetcode.question1_100;
 
 /**
+ * 最长回文子串
  * @author Feg
  * @version 1.0
  * 感动，第四次提交终于过了，第一次卡在单字符"a"，第二次卡在"ac"，第三次卡在不是最长的（""aacabdkacaa""）,
