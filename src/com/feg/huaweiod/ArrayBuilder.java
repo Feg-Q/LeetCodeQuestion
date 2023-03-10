@@ -26,7 +26,6 @@ public class ArrayBuilder {
             res(list,i,0,left,right);
         }
         System.out.println(count);
-
     }
     public static void res(List<Integer> list,int index,int sum,int left,int right){
         int temp = sum + list.get(index);
@@ -40,6 +39,5 @@ public class ArrayBuilder {
         for (int i = index; i < list.size(); i++) {
             res(list, i, temp, left, right);
         }
-
     }
 }
