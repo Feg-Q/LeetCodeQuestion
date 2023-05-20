@@ -1,4 +1,4 @@
-package leetcode.question201_300;
+package com.feg.leetcode.question201_300;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

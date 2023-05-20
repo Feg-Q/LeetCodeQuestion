@@ -1,4 +1,4 @@
-package leetcode.question401_500;
+package com.feg.leetcode.question401_500;
 
 
 /**

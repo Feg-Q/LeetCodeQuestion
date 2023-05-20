@@ -1,4 +1,4 @@
-package leetcode.question301_400;
+package com.feg.leetcode.question301_400;
 
 /**
  * @author Feg

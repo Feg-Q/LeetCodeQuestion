@@ -1,4 +1,4 @@
-package leetcode.question701_800;
+package com.feg.leetcode.question701_800;
 
 /**
  * 上台阶的最小花费（动态规划）
