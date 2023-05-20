@@ -1,4 +1,4 @@
-package com.feg.leetcode.question601_700;
+package leetcode.question601_700;
 
 import com.feg.TreeNode;
 

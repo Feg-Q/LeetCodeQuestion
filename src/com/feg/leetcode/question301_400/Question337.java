@@ -1,4 +1,4 @@
-package com.feg.leetcode.question301_400;
+package leetcode.question301_400;
 
 import com.feg.TreeNode;
 import java.util.HashMap;

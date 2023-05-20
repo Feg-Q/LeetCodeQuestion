@@ -1,4 +1,4 @@
-package com.feg.leetcode.question201_300;
+package leetcode.question201_300;
 
 import com.feg.ListNode;
 

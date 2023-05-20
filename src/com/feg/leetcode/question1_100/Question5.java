@@ -1,4 +1,4 @@
-package com.feg.leetcode.question1_100;
+package leetcode.question1_100;
 
 /**
  * 最长回文子串

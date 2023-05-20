@@ -1,4 +1,4 @@
-package com.feg.leetcode.question201_300;
+package leetcode.question201_300;
 
 /**
  * 打家劫舍问题，但房屋围成一个环

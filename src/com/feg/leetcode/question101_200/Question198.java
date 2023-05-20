@@ -1,4 +1,4 @@
-package com.feg.leetcode.question101_200;
+package leetcode.question101_200;
 
 /**
  * 打家劫舍

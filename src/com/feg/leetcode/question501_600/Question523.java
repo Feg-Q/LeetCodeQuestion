@@ -1,4 +1,4 @@
-package com.feg.leetcode.question501_600;
+package leetcode.question501_600;
 
 import java.util.HashMap;
 

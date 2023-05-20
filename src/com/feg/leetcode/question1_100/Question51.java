@@ -1,4 +1,4 @@
-package com.feg.leetcode.question1_100;
+package leetcode.question1_100;
 
 import jdk.nashorn.internal.ir.CallNode;
 
