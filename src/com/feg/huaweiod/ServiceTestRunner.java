@@ -31,5 +31,4 @@ public class ServiceTestRunner {
         }
         return service_map[k][k] + time;
     }
-
 }

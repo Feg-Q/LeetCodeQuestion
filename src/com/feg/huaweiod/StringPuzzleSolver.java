@@ -41,7 +41,7 @@ public class StringPuzzleSolver {
         int sum = 0;
         String temp = "";
         for (String s : list) {
-            System.out.println(s);
+            // System.out.println(s);
             // 获取到s的字符流并去重
             IntStream intStream = s.chars().distinct();
             // 统计去重后的字符个数
@@ -60,8 +60,6 @@ public class StringPuzzleSolver {
                 }
             }
         }
-        TreeSet<ArrayList<Integer>> set = new TreeSet<>();
-
-        System.out.println(temp);
+        System.out.println(temp == "" ? "Not Found" : temp);
     }
 }

@@ -43,18 +43,14 @@ public class RecordException {
         // 异常规则2
         for (String id : record_map.keySet()) {
             ArrayList<String[]> records = record_map.get(id);
-
             // 用打卡时间来排序，以加速后续的双层循环。
             records.sort((a, b) -> Integer.parseInt(a[1]) - Integer.parseInt(b[1]));
-
             for (int i = 0; i < records.size(); i++) {
                 int time1 = Integer.parseInt(records.get(i)[1]);
                 int dist1 = Integer.parseInt(records.get(i)[2]);
-
                 for (int j = i + 1; j < records.size(); j++) {
                     int time2 = Integer.parseInt(records.get(j)[1]);
                     int dist2 = Integer.parseInt(records.get(j)[2]);
-
                     // 如果当前的两次打卡时间超过60分, 那么后面的肯定也超过60分钟了
                     if (time2 - time1 >= 60) {
                         break;
@@ -67,7 +63,6 @@ public class RecordException {
                 }
             }
         }
-
         // 输出
         if (result.size() == 0) {
             System.out.println("null");
@@ -78,9 +73,7 @@ public class RecordException {
             }
             System.out.println(res_str.substring(0, res_str.length() - 1));
         }
-
     }
-
     // join输出
     public static String join(String[] strs) {
         String s = "";

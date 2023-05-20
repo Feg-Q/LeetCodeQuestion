@@ -12,12 +12,12 @@ public class SymmetricString {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int count = scanner.nextInt();
-        List<int[]> input = new ArrayList<>();
+        List<long[]> input = new ArrayList<>();
         for (int i = 0; i < count; i++) {
-            input.add(new int[]{scanner.nextInt(),scanner.nextInt()});
+            input.add(new long[]{scanner.nextLong(),scanner.nextLong()});
         }
-        for (int[] ints : input) {
-            int res = dfs(ints[0],ints[1] + 1);
+        for (long[] longs : input) {
+            int res = dfs(longs[0],longs[1]);
             if (res == 0){
                 System.out.println("blue");
             } else {
@@ -25,13 +25,17 @@ public class SymmetricString {
             }
         }
     }
-    public static int dfs(int n,int k){
+    public static int dfs(long n,long k){
         // 递归到第二层，可以判断了，0表示B，1表示R
         if (n == 2){
-            return k - 1;
+            if (k == 0){
+                return 1;
+            } else {
+                return 0;
+            }
         }
-        int count = 1 << n-1;
-        if (k > count/2) {
+        long count = 1L << n-1;
+        if (k >= count/2) {
             return dfs(n-1,k-count/2);
         } else {
             int res = dfs(n-1,k);

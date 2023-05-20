@@ -7,6 +7,10 @@ package com.feg.leetcode.question901_1000;
  * 卧槽，还有这么简单的算法
  */
 public class Question977 {
+    public static void main(String[] args) {
+        int[] input = new int[]{-9,-3,-1,2,5,6};
+        new Question977().sortedSquares2(input);
+    }
     public int[] sortedSquares(int[] nums) {
         int length = nums.length;
         int left;
@@ -59,6 +63,30 @@ public class Question977 {
                 }
             }
         }
+        return result;
+    }
+
+    /**
+     * 双指针的解法
+     */
+    public int[] sortedSquares2(int[] nums) {
+        int[] result = new int[nums.length];
+        int k = nums.length - 1;
+        int i = 0;
+        int j = k;
+        while (i < j){
+            int a = nums[i] * nums[i];
+            int b = nums[j] * nums[j];
+            if (a > b) {
+                result[k] = a;
+                i++;
+            } else {
+                result[k] = b;
+                j--;
+            }
+            k--;
+        }
+        result[0] = nums[i] * nums[i];
         return result;
     }
 }

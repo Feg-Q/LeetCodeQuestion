@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
  * @author Feg
  * @version 1.0
  */
-public class Question41 {
+public class MaxLsoSumSubsequenceSuccessive {
     public static void main(String[] args) {
         // 处理输入
         Scanner in = new Scanner(System.in);
@@ -35,6 +35,7 @@ public class Question41 {
             }
         }
         int res = 0;
+        // 遍历每一种和的情况，找出包含子序列最多的
         for (List<int[]> list : map.values()) {
             res = Math.max(res, removeIntersect(list));
         }
