@@ -5,7 +5,7 @@ import com.feg.ListNode;
 /**
  * @author Feg
  * @version 1.0
- * 链表的双指针，通用链表结点类在Question2
+ * 链表的双指针
  */
 public class Question19 {
     public ListNode removeNthFromEnd(ListNode head, int n) {
@@ -29,5 +29,23 @@ public class Question19 {
             left.next = temp.next;
         }
         return head;
+    }
+    // 前后双指针的方法，遍历一次即可
+    public ListNode removeNthFromEnd2(ListNode head, int n) {
+        ListNode temp = new ListNode();
+        temp.next = head;
+        ListNode preNode = temp;
+        for (int i = 0; i < n; i++) {
+            if (preNode.next!=null){
+                preNode = preNode.next;
+            }
+        }
+        ListNode backNode = temp;
+        while (preNode.next!=null){
+            preNode = preNode.next;
+            backNode = backNode.next;
+        }
+        backNode.next = backNode.next.next;
+        return temp.next;
     }
 }
