@@ -5,31 +5,15 @@ import com.feg.leetcode.Node;
 import java.util.ArrayDeque;
 
 /**
- * 连接二叉树结点的右侧结点
  * @author Feg
  * @version 1.0
+ * @Date 2023/6/9 21:34
+ *  * 连接二叉树结点的右侧结点，不限制二叉树是完美二叉树
+ *  代码上和116题一模一样，一点都没有改变
  */
-public class Question116 {
-    // 1. 遍历的思路，不能用分解问题的思路，因为分解问题是限于一个结点和其左右子节点的范围的
+public class Question117 {
+    // 使用层序遍历的方法，时间复杂度相比于递归会低一点
     public Node connect(Node root) {
-        if (root == null) {
-            return null;
-        }
-        getConnect(root.left,root.right);
-        return root;
-    }
-    public void getConnect(Node left,Node right) {
-        if (left == null || right == null) {
-            return;
-        }
-        left.next = right;
-        getConnect(left.left,left.right);
-        getConnect(left.right,right.left);
-        getConnect(right.left,right.right);
-    }
-
-    // 2. 使用层序遍历的方法，时间复杂度相比于递归会低一点
-    public Node connect2(Node root) {
         if (root == null) {
             return null;
         }
