@@ -43,4 +43,20 @@ public class Question24 {
         }
         return vHead.next;
     }
+
+    public ListNode swapPairs2(ListNode head) {
+        // 构建虚拟头结点
+        ListNode dummyList = new ListNode(-1);
+        dummyList.next = head;
+        ListNode cur = dummyList;
+        while(cur.next != null && cur.next.next != null) {
+            ListNode left = cur.next;
+            ListNode right = cur.next.next;
+            cur.next = right;
+            left.next = right.next;
+            right.next = left;
+            cur = left;
+        }
+        return dummyList.next;
+    }
 }
