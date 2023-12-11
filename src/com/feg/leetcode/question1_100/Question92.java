@@ -30,4 +30,60 @@ public class Question92 {
         temp.next = most;
         return lastHead;
     }
+
+    /**
+     * 头插法实现
+     */
+    public ListNode reverseBetween2(ListNode head, int left, int right) {
+        // 先找到下一个节点是left的节点
+        ListNode cur = head;
+        int dur = right - left;
+        while (cur != null && left > 1) {
+            cur = cur.next;
+            left--;
+        }
+        // 记录要遍历的指针，以及记录好区间的第一个节点
+        ListNode vList = new ListNode(-1);
+        while (cur != null && dur >= 0) {
+            ListNode next = cur.next;
+            cur.next = vList.next;
+            vList.next = cur;
+            cur = next;
+            dur--;
+        }
+        return head;
+    }
+
+    public ListNode reverseBetween3(ListNode head, int left, int right) {
+        ListNode dummyList = new ListNode(-1);
+        dummyList.next = head;
+        // 先找到left左边的那一个
+        ListNode pre = dummyList;
+        for(int i = 0;i < left - 1;i++) {
+            pre = pre.next;
+        }
+        ListNode leftNode = pre.next;
+        ListNode rightNode = pre;
+        for(int i = 0;i < right - left + 1;i++) {
+            rightNode = rightNode.next;
+        }
+        ListNode next = rightNode.next;
+        rightNode.next = null;
+        // pre.next = null;
+        ListNode res = reverseList(pre.next);
+        pre.next = res;
+        leftNode.next = next;
+        return dummyList.next;
+    }
+    public ListNode reverseList(ListNode head) {
+        ListNode pre = null;
+        ListNode cur = head;
+        while(cur != null) {
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+        return pre;
+    }
 }
