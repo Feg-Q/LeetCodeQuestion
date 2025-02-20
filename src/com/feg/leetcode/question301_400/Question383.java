@@ -26,4 +26,21 @@ public class Question383 {
         }
         return flag;
     }
+
+    /**
+     * 解法2
+     */
+    public boolean canConstruct2(String ransomNote, String magazine) {
+        int[] arr = new int[26];
+        for (char c : magazine.toCharArray()) {
+            arr[c - 'a'] += 1;
+        }
+        for (char c : ransomNote.toCharArray()) {
+            arr[c - 'a']--;
+            if (arr[c - 'a'] < 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
