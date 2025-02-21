@@ -1,9 +1,6 @@
 package com.feg.leetcode.question1_100;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -14,7 +11,6 @@ import java.util.stream.Collectors;
 public class Question49 {
     
     public List<List<String>> groupAnagrams(String[] strs) {
-
         Map<String, List<String>> res = new HashMap<>();
         
         for (String str : strs) {
@@ -27,6 +23,14 @@ public class Question49 {
             valueList.add(str);
             res.put(sortedStr, valueList);
         }
+        // 下面是简洁写法
+        for (String str : strs) {
+            char[] arr = str.toCharArray();
+            Arrays.sort(arr);
+            String s = new String(arr);
+            res.computeIfAbsent(s, k -> new ArrayList<>()).add(str);
+        }
+
         return new ArrayList<>(res.values());
     }
 }
